@@ -15,6 +15,8 @@ public class VoxelMaker : MonoBehaviour
     // 경과 시간
     float currentTime = 0;
 
+    public Transform crosshair;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +34,8 @@ public class VoxelMaker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        ARAVRInput.DrawCrosshair(crosshair);
+
         currentTime += Time.deltaTime;
 
         // 2. 경과 시간이 생성 시간을 초과했다면
